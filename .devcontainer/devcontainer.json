@@ -1,0 +1,47 @@
+{
+    "name": "dev",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "workspaceFolder": "/pico-with-vscode",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/pico-with-vscode,type=bind,consistency=cached",
+    "settings": {
+        "python.linting.enabled": true,
+        "python.languageServer": "Pylance",
+        "python.analysis.typeCheckingMode": "basic",
+        "python.analysis.dianosticServerOverrides": {
+            "reportMissingModuleSource": "none"
+        },
+        "micropico.syncFolder": "./src",
+        "micropico.openOnStart": true,
+        "micropico.syncFileTypes": [
+            "py",
+            "txt",
+            "log",
+            "json",
+            "xml",
+            "html",
+            "js",
+            "css",
+            "mpy",
+        ],
+        "python.analysis.typeshedPaths": [
+            "~/.micropico-stubs/included"
+        ],
+        "python.analysis.extraPaths": [
+            "~/.micropico-stubs/included"
+        ],
+    },
+    // "runArgs": [
+    //     "--device=/dev/ttyUSB0:/dev/ttyUSB0"
+    // ],
+    "extensions": [
+        "ms-python.python",
+        "raspberry-pi.raspberry-pi-pico",
+        "MS-CEINTL.vscode-language-pack-ja",
+        "paulober.pico-w-go",
+        "ms-python.flake8",
+        "ms-azuretools.vscode-docker"
+    ]
+}
