@@ -1,8 +1,7 @@
 {
     "name": "dev",
     "build": {
-        "dockerfile": "Dockerfile",
-        "context": ".."
+        "dockerfile": "Dockerfile"
     },
     "workspaceFolder": "/pico-with-vscode",
     "workspaceMount": "source=${localWorkspaceFolder},target=/pico-with-vscode,type=bind,consistency=cached",
@@ -33,9 +32,9 @@
             "~/.micropico-stubs/included"
         ],
     },
-    // "runArgs": [
-    //     "--device=/dev/ttyUSB0:/dev/ttyUSB0"
-    // ],
+    "runArgs": [
+        "--device=/dev/ttyACM0"
+    ],
     "extensions": [
         "ms-python.python",
         "raspberry-pi.raspberry-pi-pico",

@@ -5,9 +5,6 @@ FROM ubuntu:22.04
 RUN apt-get update && apt-get install -y \
     git \
     locales
-    # build-essential \
-    # cmake \
-    # gcc-arm-none-eabi \
 
 # 日本語が使えるようにする
 RUN locale-gen ja_JP.UTF-8
